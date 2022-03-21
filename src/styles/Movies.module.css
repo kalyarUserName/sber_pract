@@ -1,0 +1,27 @@
+.movie {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "mov1 mov2 mov3 mov4";
+    grid-gap: 50px;
+    text-align: center;
+    padding: 20px 20px 20px;
+    width: 95vw;
+}
+
+.movie img {
+    /*max-height: 350px;*/
+    /*min-height: 350px;*/
+    height: 350px;
+    width: 250px;
+    display: block;
+    border-radius: 6px;
+}
+
+.mov1 {
+    border: 0.5rem solid purple;
+    border-radius: 15px;
+    width: 250px;
+
+}
