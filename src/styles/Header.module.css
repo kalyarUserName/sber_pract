@@ -1,0 +1,42 @@
+
+
+.header {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 80px;
+    grid-template-areas:
+    "logo menu";
+}
+.header img {
+    height: 60px;
+    width: 60px;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    padding: 10px 00px 00px 20px;
+    background-color: blueviolet;
+    height: 70px;
+}
+
+
+.link {
+    display: inline-block;
+    width: 12vw;
+    height: 60px;
+    text-align: center;
+    color: #8c8c8c;
+    font-size: 15pt;
+    font-family: Rubik,sans-serif;
+}
+
+.link :active{
+    color: #facc6d;
+}
+.menu {
+    grid-area: menu;
+}
+
+
+

@@ -4,9 +4,8 @@ import Movies from "../pages/Movies";
 import Error from "../pages/Error";
 
 export const routes = [
-    {path: '/', component: <Home />, exact: true},
-    {path: '/profile', component: <Profile />, exact: false},
-    {path: '/movies', component: <Movies />, exact: false},
-    {path: '/error', component: <Error />, exact: false}
+    {path: '/', component: <Home />, exact: true, desc: 'Главная'},
+    {path: '/profile', component: <Profile />, exact: false, desc: 'Профиль'},
+    {path: '/movies', component: <Movies />, exact: false, desc: 'Фильмы'}
 
 ]

@@ -60,9 +60,10 @@ function App() {
             isAuth,
             setIsAuth
         }}>
-        <BrowserRouter>
+        <BrowserRouter style={{maxWidth: 1000}}>
             <Header/>
-            <div>
+            <div className="main-content">
+                {isAuth ?
                 <Routes style={{width: 100}}>
                     <Route path="/"
                            element={<Home/>} />
@@ -80,6 +81,7 @@ function App() {
                     <Route path="profile" element={<Navigate replace to={"/login"} />} />
                     <Route path="error" element={<Error />} />
                 </Routes>
+                }
             </div>
         </BrowserRouter>
         </AuthContext.Provider>
