@@ -7,9 +7,9 @@ const Login = () => {
     const UserCont = useContext(UserContext);
     const AuthCont = useContext(AuthContext);
     const [error, setError] = useState(null);
-    useEffect(()=> {
+    useEffect(() => {
         setError(null);
-    },[])
+    }, [])
     const login = event => {
         event.preventDefault();
         setError(null);
@@ -26,14 +26,18 @@ const Login = () => {
     }
     return (
         <div className={s.loginWrapper}>
-            <form onSubmit={login}>
-                <input type="text" id="username" placeholder="username"
-                       onSubmit={event => UserCont.setUser(event.target.value)}/>
-                <input type="password" id="password" placeholder="password"/>
-                <button>Login</button>
+            <form onSubmit={login} className={s.loginF}>
+                <div>
+                    <input className={s.loginForm} type="text" id="username" placeholder="username"
+                           onSubmit={event => UserCont.setUser(event.target.value)}/>
+                </div>
+                <div><input className={s.loginForm} type="password" id="password" placeholder="password"/></div>
+                <button style={{marginLeft: 10}}>Login</button>
+                {error !== null ?
+                    <h6 style={{marginLeft: 10, marginTop: 5}} className={s.incorrect}>Имя пользователя или пароль
+                        введены не верно!</h6> : (<div/>)}
 
             </form>
-            {error!==null ? <h3 className={s.incorrect}>Имя пользователя или пароль введены не верно!</h3> : (<div/>)}
         </div>
     );
 };

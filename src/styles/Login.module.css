@@ -1,15 +1,31 @@
-.loginWrapper  {
+.loginWrapper {
     display: flex;
     flex-direction: column;
     align-items: start;
 
 }
+
 .loginWrapper label {
     padding-top: 10px;
 }
+
 .loginWrapper button {
     margin-top: 10px;
 }
-.incorrect{
+
+.incorrect {
     color: red;
+}
+.loginForm {
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 220px;
+}
+.loginF {
+    margin-top: 15px;
+    border: 0.5rem solid purple;
+    border-radius: 15px;
+    width: 250px;
+    height: 150px;
+    background-color: lightgray;
 }

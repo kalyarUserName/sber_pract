@@ -58,9 +58,8 @@
 
 .main-content {
     background-color: #212121;
-    width: 100vw;
+    width: 90vw;
     height: auto;
     min-height: 85vh;
     display: block;
-    padding-left: 20px;
 }

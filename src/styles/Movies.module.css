@@ -6,9 +6,10 @@
     "mov1 mov2 mov3 mov4";
     grid-gap: 20px;
     text-align: center;
-    padding: 20px;
+    //padding: 20px;
     width: 80vw;
     /*margin-left: 30px;*/
+    /*margin-left: -70px;*/
 }
 
 .movie img {
@@ -24,17 +25,20 @@
     border: 0.5rem solid purple;
     border-radius: 15px;
     width: 250px;
-    background-color:  #e0e0e0;;
+    height: 410px;
+    background-color: #e0e0e0;;
 }
+
 .namePoster {
     margin: 0;
 }
-.stylePoster{
+
+.stylePoster {
     margin: 0;
-    padding-bottom:5px;
+    padding-bottom: 5px;
     font-style: italic;
 }
 
-.sortMovies{
+.sortMovies {
     margin: 20px 20px;
 }

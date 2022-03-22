@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AppRouter = () => {
-    return ( <div> </div>
+    return (<div></div>
         // <Routes>
         //     {routes.map(route => {
         //         return <Route path={route.path} exact={route.exact} element={route.component(route.props)}/>

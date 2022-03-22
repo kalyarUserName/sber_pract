@@ -2,11 +2,11 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div style={{color:"white"}}>
-            <h3>This is HOME page</h3>
+        <div style={{color: "white"}}>
+            <h3>Это главная страница</h3>
             <div>
-                <div>A web application that provides a selection of movies and TV series welcomes you. </div>
-                <div>Here you will find many films of various genres, authors and actors. </div>
+                <div>Вас приветствует веб-приложение, предоставляющее подборку фильмов и сериалов.</div>
+                <div>Здесь вы найдете множество фильмов различных жанров, авторов и актеров.</div>
             </div>
         </div>
     );

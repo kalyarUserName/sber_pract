@@ -1,27 +1,42 @@
-import React, {useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import Poster from "../components/movies/Poster";
 import s from "../styles/Movies.module.css";
+import axios from "axios";
 
 const Movies = (props) => {
-
-    // const [selectedSort, setSelectedSort] = useState('');
+    useEffect(() => {
+            fetchMovies();
+        },
+        [])
+    const [movies, setMovies] = useState([]);
+    const [selectedSort, setSelectedSort] = useState('');
 
     const sortMovies = (sort) => {
-        // setSelectedSort(sort);
-        // console.log(selectedSort, sort);
-        props.setM([...props.data].sort((a, b) => a[sort].localeCompare(b[sort])));
+        setSelectedSort(sort);
     }
+    const sortMovies1 = useMemo(() => {
+        if (selectedSort)
+            return ([...movies].sort((a, b) => a[selectedSort].localeCompare(b[selectedSort])));
+        else return movies
+    }, [movies, selectedSort]);
+
+    async function fetchMovies() {
+        const responseStarWars = await axios.get('https://fake-movie-database-api.herokuapp.com/api?s=star wars');
+        const responseBatman = await axios.get('https://fake-movie-database-api.herokuapp.com/api?s=batman');
+        setMovies([...responseStarWars.data.Search, ...responseBatman.data.Search]);
+    }
+
     return (
         <div>
             <select className={s.sortMovies}
                     onChange={event => sortMovies(event.target.value)}>
                 <option disabled value="">Сортировка</option>
-                <option value="name"> По названию</option>
-                <option value="style"> По жанру</option>
+                <option value="Title"> По названию</option>
+                <option value="Year"> По году</option>
             </select>
             <div className={s.movie}>
-                {props.data.map(movie => (
-                    <Poster key={movie.id} name={movie.name} style={movie.style} image={movie.image}/>
+                {sortMovies1.map(movie => (
+                    <Poster key={movie.imdbID} name={movie.Title} year={movie.Year} image={movie.Poster}/>
                 ))}
             </div>
         </div>);
