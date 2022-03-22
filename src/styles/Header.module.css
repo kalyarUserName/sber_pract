@@ -1,5 +1,4 @@
 
-
 .header {
     display: grid;
     grid-template-columns: 100px 1fr;
@@ -7,6 +6,7 @@
     grid-template-areas:
     "logo menu";
 }
+
 .header img {
     height: 60px;
     width: 60px;
@@ -23,20 +23,41 @@
 
 .link {
     display: inline-block;
-    width: 12vw;
+    width: 120px;
     height: 60px;
     text-align: center;
     color: #8c8c8c;
     font-size: 15pt;
-    font-family: Rubik,sans-serif;
+    font-family: Rubik, sans-serif;
+    padding-top: 30px;
 }
 
-.link :active{
+.activeLink {
+    display: inline-block;
+    width: 12vw;
+    height: 60px;
+    text-align: center;
     color: #facc6d;
+    font-size: 15pt;
+    font-family: Rubik, sans-serif;
 }
+
 .menu {
     grid-area: menu;
 }
 
+.searcher {
+    min-width: 500px;
+    max-width: 50vw;
+}
+
+.visible {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
 
 

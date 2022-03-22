@@ -1,0 +1,15 @@
+.loginWrapper  {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+.loginWrapper label {
+    padding-top: 10px;
+}
+.loginWrapper button {
+    margin-top: 10px;
+}
+.incorrect{
+    color: red;
+}
